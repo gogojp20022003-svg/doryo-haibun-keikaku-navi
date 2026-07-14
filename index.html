@@ -42,6 +42,12 @@ body{font-family:'Hiragino Sans','Meiryo','Yu Gothic',sans-serif;background:var(
 .hdr-btns{display:flex;gap:5px;flex-wrap:wrap}
 .hdr-btns button{font-size:.7rem;padding:5px 10px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:6px;cursor:pointer;font-family:inherit}
 .hdr-btns button:hover{background:rgba(255,255,255,.25)}
+.public-download{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;margin-top:10px;padding:8px 10px;border:1px solid rgba(255,255,255,.38);border-left:4px solid var(--acc);border-radius:8px;background:rgba(255,255,255,.1)}
+.public-download-copy{min-width:0;font-size:.68rem;line-height:1.55;color:rgba(255,255,255,.88)}
+.public-download-copy strong{display:block;font-size:.82rem;color:#fff}
+.public-download-copy span{display:block}
+.public-download-button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border:2px solid #fff;border-radius:7px;background:var(--acc);color:#fff;text-decoration:none;font-size:.78rem;font-weight:700;white-space:nowrap}
+.public-download-button:hover,.public-download-button:focus-visible{background:#e65100;outline:2px solid #fff;outline-offset:2px}
 
 /* モード切替 */
 .mode-sw{display:flex;gap:0;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,.4);margin-top:6px}
@@ -215,7 +221,10 @@ th{background:var(--pri);color:#fff;text-align:center;white-space:nowrap}
   .flow-row{flex-wrap:wrap}
   .soil-bar{gap:2px;padding:6px 8px}
   .sb-item{padding:3px 8px;font-size:.68rem}
+  .public-download{grid-template-columns:1fr;gap:7px;padding:8px}
+  .public-download-button{width:100%;white-space:normal;text-align:center}
 }
+@media print{.public-download{display:none!important}}
 </style>
 </head>
 <body>
@@ -235,6 +244,14 @@ th{background:var(--pri);color:#fff;text-align:center;white-space:nowrap}
       <input type="file" id="jIn" accept=".json" style="display:none" onchange="impJSON(event)">
       <button onclick="if(confirm(&#39;全データを初期化しますか？&#39;))resetAll()">🗑 初期化</button>
     </div>
+  </div>
+  <div class="public-download">
+    <div class="public-download-copy">
+      <strong>PCに保存して使う</strong>
+      <span>ZIPを展開し、HTMLファイルをChromeまたはEdgeで開いてください。Excel出力を含む本格的な利用にはPCを推奨します。</span>
+      <span>PC版の保存・Excel出力を利用する場合は、ZIP版を推奨します。スマートフォンでは、簡易入力と計算結果の確認を主な利用範囲とします。</span>
+    </div>
+    <a href="./download/doryo-haibun-keikaku-navi-v1.0.zip" download class="public-download-button">無料版ZIPをダウンロード</a>
   </div>
   <div class="mode-sw" id="modeSw">
     <button class="easy" onclick="setMode(&#39;easy&#39;)">🌱 超やさしいモード（数量だけ）</button>
