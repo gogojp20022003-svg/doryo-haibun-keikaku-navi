@@ -1,0 +1,13 @@
+.env
+.env.*
+*.zip
+*.mp4
+*.mp3
+*.wav
+*.xlsx
+*.json
+検証/
+動画/
+作品画像/
+_tmp*/
+node_modules/
