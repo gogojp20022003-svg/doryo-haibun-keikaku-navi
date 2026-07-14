@@ -17,3 +17,19 @@
 正式な設計、契約数量、施工条件については、関係資料や発注者との協議内容を確認してください。
 
 本リポジトリにはオープンソースライセンスを付与していません。
+
+## アプリを使う
+
+GitHub Pages：
+https://gogojp20022003-svg.github.io/doryo-haibun-keikaku-navi/
+
+## ZIP版をダウンロード
+
+ブラウザで直接利用せず、ローカルPCへ保存して使う場合はこちらからダウンロードできます。
+
+配布用ZIP：
+https://gogojp20022003-svg.github.io/doryo-haibun-keikaku-navi/download/doryo-haibun-keikaku-navi-v1.0.zip
+
+ZIPを展開後、「土量配分計画ナビ_Ver1.0.html」をChromeまたはEdgeで開いてください。
+
+Excel出力を含む本格的な利用にはPCを推奨します。
